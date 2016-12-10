@@ -87,7 +87,7 @@ class WhoosheeQuery(BaseQuery):
                                match_substrings=match_substrings,
                                limit=limit)
         if not res:
-            return self.filter(text('null'))
+            return self.filter(0 == 1)
 
         # transform unique field name into model attribute field
         attr = None
